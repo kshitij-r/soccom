@@ -1,0 +1,42 @@
+{
+  "R_1":
+    {
+      "IP_name": "wb_bus_b3.v",
+      "config" : "SLAVE",
+      "neighbors": ["EP_0","EP_1","EP_2"],
+      "IP_type": "non_memory",
+      "size"   : "32'h0000_0000",
+      "bus_type" : "Wishbone",
+      "is_Router": true
+    },
+  "EP_0":
+  {
+    "IP_name": "aes_top.v",
+    "neighbors": ["R_1"],
+    "config" : "SLAVE",
+    "IP_type": "non_memory",
+    "size"   : "32'h0000_0000",
+    "bus_type" : "Wishbone",
+    "is_Router": false
+  },
+  "EP_1":
+  {
+    "IP_name": "picorv32_top.v",
+    "config" : "MASTER",
+    "IP_type": "non_memory",
+    "neighbors": ["R_1"],
+    "size"   : "32'h00000000",
+    "bus_type" : "Wishbone",
+    "is_Router": false
+  },
+  "EP_2":
+  {
+    "IP_name": "stub_wrong.v",
+    "config" : "SLAVE",
+    "IP_type": "non_memory",
+    "neighbors": ["R_1"],
+    "size"   : "32'h00000000",
+    "bus_type" : "Wishbone",
+    "is_Router": false
+  }
+}

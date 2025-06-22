@@ -1,0 +1,38 @@
+{
+	"EP_1": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"top_module_fname": "picorv32.v"
+	},
+	"EP_2": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"top_module_fname": "fft_top.v"
+	},
+	"R_1": {
+		"neighbors": ["EP_1", "EP_2", "EP_3", "R_2"],
+		"is_Router": true,
+		"top_module_fname": "noc_router.sv"
+	},
+	"EP_3": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"top_module_fname": "aes_top.v"
+	},
+	"R_2": {
+		"neighbors": ["EP_4", "R_1", "EP_5"],
+		"is_Router": true,
+		"top_module_fname": "noc_router.sv"
+	},
+	"EP_4": {
+		"neighbors": ["R_2"],
+		"is_Router": false,
+		"top_module_fname": "md5_top.v"
+	},
+
+	"EP_5": {
+		"neighbors": ["R_2"],
+		"is_Router": false,
+		"top_module_fname": "spi_topMY1.v"
+	}
+}

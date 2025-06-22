@@ -1,0 +1,36 @@
+{"IP_1":
+  {
+    "IP_name": "clkgen.v",
+    "config" : "SLAVE",
+    "IP_type": "non_memory",
+    "size"   : "32'h00000000"
+  },
+  "IP_2":
+  {
+    "IP_name": "ram_top_axi4lite.sv",
+    "config" : "SLAVE",
+    "IP_type": "memory",
+    "size"   : "32'h0002_0000"
+  },
+  "IP_3":
+  {
+    "IP_name": "uart_top_axi4lite.sv",
+    "config" : "SLAVE",
+    "IP_type": "non_memory",
+    "size"   : "32'h00000000"
+  },
+  "IP_4":
+  {
+    "IP_name": "picorv32_top_axi4lite.sv",
+    "config" : "MASTER",
+    "IP_type": "non_memory",
+    "size"   : "32'h00000000"
+  },
+  "IP_5":
+  {
+    "IP_name": "aes_top_axi4lite.sv",
+    "config" : "SLAVE",
+    "IP_type": "non_memory",
+    "size"   : "32'h00000000"
+  }  
+}

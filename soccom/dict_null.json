@@ -1,0 +1,19 @@
+{
+    "EP_O":
+        {
+            "IP_name": "wb_bus_b3.v",
+            "config": "SLAVE",
+            "bus_type": "NONE"
+        },
+    "EP_1":
+        {
+            "IP_name": "aes_top_new.v",
+            "neighbors": ["R_1"],
+            "bus_type": "NONE"
+        },
+    "EP_2":
+        {
+            "IP_name": "picorv32_top.v",
+            "bus_type": "NONE"
+        }
+}

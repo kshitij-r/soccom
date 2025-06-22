@@ -1,0 +1,31 @@
+{
+	"R_1": {
+		"neighbors": ["EP_1", "R_2"],
+		"is_Router": true,
+		"top_module_fname": "noc_router.sv",
+		"is_Master": false,
+		"is_Slave": true
+	},
+	"EP_1": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"top_module_fname": "picorv32_top.v",
+		"is_Master": true,
+		"is_Slave": false
+	},
+	
+	"EP_2": {
+		"neighbors": ["R_2"],
+		"is_Router": false,
+		"top_module_fname": "aes_top.v",
+		"is_Master": false,
+		"is_Slave": true
+	},
+	"R_2": {
+		"neighbors": ["R_1", "EP_2"],
+		"is_Router": true,
+		"top_module_fname": "noc_router.sv",
+		"is_Master": false,
+		"is_Slave": true	
+	}
+}

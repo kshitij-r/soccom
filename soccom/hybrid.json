@@ -1,0 +1,175 @@
+{"R_1":
+  {
+    "IP_name": "wb_bus_b3.v",
+    "config" : "SLAVE",
+    "neighbors": ["EP_0","EP_1","EP_2","EP_3"],
+    "IP_type": "non_memory",
+    "size"   : "32'h0000_0000",
+    "bus_type" : "Wishbone",
+    "is_Router": true
+  },
+  "EP_O":
+  {
+    "IP_name": "aes_top_new.v",
+    "neighbors": ["R_1"],
+    "config" : "SLAVE",
+    "IP_type": "non_memory",
+    "size"   : "32'h0000_0000",
+    "bus_type" : "Wishbone",
+    "is_Router": false
+  },
+  "EP_1":
+  {
+    "IP_name": "picorv32_top.v",
+    "config" : "MASTER",
+    "neighbors": ["R_1"],
+    "IP_type": "non_memory",
+    "size"   : "32'h0000_0000",
+    "bus_type" : "Wishbone",
+    "is_Router": false
+  },
+  "EP_2":
+  {
+    "IP_name": "ram_wb_b3.v",
+    "config" : "SLAVE",
+    "neighbors": ["R_1"],
+    "IP_type": "non_memory",
+    "size"   : "32'h2000_0000",
+    "bus_type" : "Wishbone",
+    "is_Router": false
+  },
+  "EP_3":
+    {
+      "IP_name": "md5_top.v",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "neighbors": ["R_1"],
+      "size"   : "32'h00000000",
+      "bus_type" : "Wishbone",
+      "is_Router": false
+    },  
+    
+    "EP_5":
+    {
+      "IP_name": "axi4lite_2_wb.sv",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "size"   : "32'h00000000",
+      "bus_type" : "AXI",
+      "base_address"   : "32'h0000_0000",
+      "is_Router": false
+    },
+  
+  "EP_6":
+    {
+      "IP_name": "clkgen.v",
+      "config" : "SLAVE",
+      "neighbors": "",
+      "IP_type": "non_memory",
+      "size"   : "32'h00000000",
+      "base_address"   : "32'h0000_0000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    },
+    
+    "EP_7":
+    {
+      "IP_name": "ram_top_axi4lite.sv",
+      "config" : "SLAVE",
+      "IP_type": "memory",
+      "neighbors": "",
+      "size"   : "32'h0002_0000",
+      "base_address"   : "32'h0000_0000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    },
+    "EP_8":
+    {
+      "IP_name": "uart_top_axi4lite.sv",
+      "bus_type" : "AXI",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "neighbors": "",
+      "size"   : "32'h00000000",
+      "base_address"   : "32'h0000_0000",
+      
+      "is_Router": false
+    },
+    "EP_9":
+    {
+      "IP_name": "picorv32_top_axi4lite.sv",
+      "config" : "MASTER",
+      "IP_type": "non_memory",
+      "neighbors": "",
+      "size"   : "32'h00000000",
+      "bus_type" : "AXI",
+      "base_address"   : "32'h0000_0000",
+      "is_Router": false
+    },
+    "EP_10":
+    {
+      "IP_name": "aes_top_axi4lite.sv",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "neighbors": "",
+      "size"   : "32'h00000000",
+      "base_address"   : "32'h0000_0000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    },
+    "EP_11":
+    {
+      "IP_name": "md5_top_axi4lite.sv",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "neighbors": "",
+      "size"   : "32'h00000000",
+      "base_address"   : "32'h0000_0000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    }, 
+    "EP_12":
+    {
+      "IP_name": "sha256_top_axi4lite.sv",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "neighbors": "",
+      "size"   : "32'h00000000",
+      "base_address"   : "32'h0000_0000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    },  
+    "EP_13":
+    {
+      "IP_name": "rsa_top_axi4lite.sv",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "neighbors": "",
+      "size"   : "32'h00000000",
+      "base_address"   : "32'h0000_0000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    },
+    "EP_14":
+    {
+      "IP_name": "des3_top_axi4lite.sv",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "neighbors": "",
+      "size"   : "32'h00000000",
+      "base_address"   : "32'h0000_0000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    },
+    "EP_15":
+    {
+      "IP_name": "networkadapter_ct.sv",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "neighbors": ["R_1"],
+      "size"   : "32'h00000000",
+      "bus_type" : "Wishbone",
+      "is_Router": false
+    }
+     
+  }

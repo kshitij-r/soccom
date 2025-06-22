@@ -1,0 +1,120 @@
+{
+    "R_1":
+      {
+        "IP_name": "wb_bus_b3.v",
+        "config" : "SLAVE",
+        "neighbors": ["EP_0","EP_1"],
+        "IP_type": "non_memory",
+        "size"   : "32'h0000_0000",
+        "bus_type" : "Wishbone",
+        "is_Router": true
+      },
+    "EP_0":
+    {
+      "IP_name": "aes_top.v",
+      "neighbors": ["R_1"],
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "size"   : "32'h0000_0000",
+      "bus_type" : "Wishbone",
+      "is_Router": false
+    },
+    "EP_1":
+    {
+      "IP_name": "ram_wb_b3.v",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "neighbors": ["R_1"],
+      "size"   : "32'h00000000",
+      "bus_type" : "Wishbone",
+      "is_Router": false
+    },
+    "EP_3": {
+          "neighbors": ["R_2"],
+          "is_Router": false,
+          "is_Master": true,
+      "top_module_fname": "picorv32.v",
+      "config": "NOC"
+      
+      },
+    "EP_5": {
+        "neighbors": ["R_2"],
+        "is_Router": false,
+        "is_Master": false,
+    "top_module_fname": "idft_top_top.v",
+    "config": "NOC"
+    },
+    
+    "R_2": {
+        "neighbors": ["EP_3", "EP_5", "R_3"],
+        "is_Router": true,
+        "is_Master": false,
+    "top_module_fname": "noc_router.sv",
+    "config": "NOC"
+},
+    "R_3": {
+          "neighbors": ["EP_7", "EP_9","R_2"],
+          "is_Router": true,
+          "is_Master": false,
+      "top_module_fname": "noc_router.sv",
+      "config": "NOC"
+      },
+      "EP_7": {
+          "neighbors": ["R_3"],
+          "is_Router": false,
+          "is_Master": false,
+      "top_module_fname": "ram_wb_02.sv",
+      "config": "NOC"
+      },
+      
+    "EP_9": {
+          "neighbors": ["R_3"],
+          "is_Router": false,
+          "is_Master": false,
+      "top_module_fname": "axi_soc.v",
+      "config": "NOC"
+    },
+    
+    "EP_10":
+    {
+      "IP_name": "clkgen.v",
+      "config" : "SLAVE",
+      "base_address"   : "32'h0000_0000",
+      "IP_type": "non_memory",
+      "size"   : "32'h00000000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    },
+    
+    "EP_11":
+    {
+      "IP_name": "ram_top_axi4lite.sv",
+      "config" : "SLAVE",
+      "IP_type": "memory",
+      "base_address"   : "32'h0000_0000",
+      "size"   : "32'h0002_0000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    },
+    
+    "EP_13":
+      {
+        "IP_name": "picorv32_top_axi4lite.sv",
+        "config" : "MASTER",
+        "IP_type": "non_memory",
+        "base_address"   : "32'h0000_0000",
+        "size"   : "32'h00000000",
+        "bus_type" : "AXI",
+        "is_Router": false
+      },
+    "EP_14":
+    {
+      "IP_name": "axi4lite_2_wb.sv",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "size"   : "32'h00000000",
+      "bus_type" : "AXI",
+      "base_address"   : "32'h0000_0000",
+      "is_Router": false
+    }
+  }  

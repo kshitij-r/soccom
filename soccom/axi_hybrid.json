@@ -1,0 +1,47 @@
+{"IP_1":
+    {
+      "IP_name": "aes_top_new.v",
+      "config" : "SLAVE",
+      "IP_type": "memory",
+      "size"   : "32'h0002_0000",
+      "bus_type" : "Wishbone",
+      "is_Router": false
+    },
+    "IP_2":
+    {
+      "IP_name": "picorv32_top.v",
+      "config" : "MASTER",
+      "IP_type": "memory",
+      "size"   : "32'h0002_0000",
+      "bus_type" : "Wishbone",
+      "is_Router": false
+    },
+    "IP_3":
+    {
+      "IP_name": "fft_top.v",
+      "config" : "SLAVE",
+      "IP_type": "memory",
+      "size"   : "32'h0002_0000",
+      "bus_type" : "Wishbone",
+      "is_Router": false
+    },
+    "IP_4":
+    {
+      "IP_name": "sha256_top.v",
+      "config" : "SLAVE",
+      "IP_type": "memory",
+      "size"   : "32'h0002_0000",
+      "bus_type" : "Wishbone",
+      "is_Router": false
+    },
+    "IP_5":
+    {
+      "IP_name": "wb_bus_b3.v",
+      "config" : "SLAVE",
+      "IP_type": "memory",
+      "size"   : "32'h0002_0000",
+      "bus_type" : "Wishbone",
+      "is_Router": true
+    }
+  }
+  

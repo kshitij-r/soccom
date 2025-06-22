@@ -1,0 +1,149 @@
+{
+	"EP_1": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"is_Master": true,
+		"top_module_fname": "picorv32.v"
+	},
+	"EP_2": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"is_Master": false,
+		"top_module_fname": "dft_top_top.v"
+	},
+	"EP_3": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"is_Master": false,
+		"top_module_fname": "idft_top_top.v"
+	},
+	"EP_4": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"is_Master": false,
+		"top_module_fname": "fir_top.v"
+	},
+	"R_1": {
+		"neighbors": ["EP_1", "EP_2", "EP_3", "EP_4","R_2"],
+		"is_Router": true,
+		"is_Master": false,
+		"top_module_fname": "noc_router.sv"
+	},
+	"EP_5": {
+		"neighbors": ["R_2"],
+		"is_Router": false,
+		"is_Master": false,
+		"top_module_fname": "ram_wb_02.sv"
+	},
+	"EP_6": {
+		"neighbors": ["R_2"],
+		"is_Router": false,
+		"is_Master": false,
+		"top_module_fname": "ram_wb_01.sv"
+	},
+	"R_2": {
+		"neighbors": ["EP_5", "R_1", "EP_6", "R_3"],
+		"is_Router": true,
+		"is_Master": false,
+		"top_module_fname": "noc_router.sv"
+    },
+	"R_3": {
+		"neighbors": ["R_2", "R_4", "R_5", "EP_7"],
+		"is_Router": true,
+		"is_Master": false,
+		"top_module_fname": "noc_router.sv"
+	},
+	"EP_7": {
+		"neighbors": ["R_3"],
+		"is_Router": false,
+		"is_Master": false,
+		"top_module_fname": "md5_top.v"
+	},
+	"R_4": {
+		"neighbors": ["R_3", "EP_8", "EP_9", "EP_10"],
+		"is_Router": true,
+		"is_Master": false,
+		"top_module_fname": "noc_router.sv"
+	},
+	"EP_8": {
+		"neighbors": ["R_4"],
+		"is_Router": false,
+		"is_Master": false,
+		"top_module_fname": "aes_top.sv"
+	},
+
+	"EP_9": {
+		"neighbors": ["R_4"],
+		"is_Router": false,
+		"is_Master": false,
+		"top_module_fname": "des3_top.sv"
+	},
+	"EP_10": {
+		"neighbors": ["R_4"],
+		"is_Router": false,
+		"is_Master": false,
+		"top_module_fname": "sha256_top.sv"
+	},
+	"R_5": {
+		"neighbors": ["R_3", "EP_11"],
+		"is_Router": true,
+		"is_Master": false,
+		"top_module_fname": "noc_router.sv"
+	},
+	"EP_11": {
+		"neighbors": ["R_5"],
+		"is_Router": false,
+		"is_Master": false,
+		"top_module_fname": "uart_top.sv"
+    },
+    "R_6":
+        {
+          "IP_name": "wb_bus_b3.v",
+          "config" : "SLAVE",
+          "neighbors": ["EP_19","EP_14","EP_15"],
+          "IP_type": "non_memory",
+          "size"   : "32'h0000_0000",
+          "bus_type" : "Wishbone",
+          "is_Router": true
+        },
+    "EP_19":
+    {
+        "IP_name": "aes_top.v",
+        "neighbors": ["R_6"],
+        "config" : "SLAVE",
+        "IP_type": "non_memory",
+        "size"   : "32'h0000_0000",
+        "bus_type" : "Wishbone",
+        "is_Router": false
+    },
+    "EP_14":
+    {
+        "IP_name": "picorv32_top.v",
+        "config" : "MASTER",
+        "neighbors": ["R_6"],
+        "IP_type": "non_memory",
+        "size"   : "32'h0000_0000",
+        "bus_type" : "Wishbone",
+        "is_Router": false
+    },
+    "EP_15":
+    {
+        "IP_name": "ram_wb_b3.v",
+        "config" : "SLAVE",
+        "neighbors": ["R_6"],
+        "IP_type": "non_memory",
+        "size"   : "32'h0000_0000",
+        "bus_type" : "Wishbone",
+        "is_Router": false
+    }
+}
+
+
+
+
+
+
+
+
+
+

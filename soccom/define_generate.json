@@ -1,0 +1,87 @@
+{
+  "IP_1":
+  {
+    "IP_name": "ram_top_axi4lite.sv",
+    "config" : false,
+    "IP_type": "memory",
+    "base_address"   : "32'h0000_0000",
+    "size" : "32'h0004_0000"
+  },
+  "IP_2":
+  {
+    "IP_name": "iir_top_axi4lite.sv",
+    "config" : false,
+    "IP_type": "non_memory",
+    "base_address"   : "32'h0000_0001"
+  },
+  "IP_3":
+  {
+    "IP_name": "uart_top_axi4lite.sv",
+    "config" : false,
+    "IP_type": "non_memory",
+    "base_address"   : "32'h0000_0002"
+  },
+  "IP_4":
+  {
+    "IP_name": "aes_top_axi4lite.sv",
+    "config" : false,
+    "IP_type": "non_memory",
+    "base_address"   : "32'h0000_0003"
+  },
+  "IP_5":
+  {
+    "IP_name": "md5_top_axi4lite.sv",
+    "config" : false,
+    "IP_type": "non_memory",
+    "base_address"   : "32'h0000_0004"
+  },
+  "IP_6":
+  {
+    "IP_name": "sha256_top_axi4lite.sv",
+    "config" : false,
+    "IP_type": "non_memory",
+    "base_address"   : "32'h0000_0005"
+  },
+  "IP_7":
+  {
+    "IP_name": "rsa_top_axi4lite.sv",
+    "config" : false,
+    "IP_type": "non_memory",
+    "base_address"   : "32'h0000_0006"
+  },
+  "IP_8":
+  {
+    "IP_name": "des3_top_axi4lite.sv",
+    "config" : false,
+    "IP_type": "non_memory",
+    "base_address"   : "32'h0000_0007"
+  },
+  "IP_9":
+  {
+    "IP_name": "dft_top_axi4lite.sv",
+    "config" : false,
+    "IP_type": "non_memory",
+    "base_address"   : "32'h0000_0008"
+  },
+  "IP_10":
+  {
+    "IP_name": "idft_top_axi4lite.sv",
+    "config" : false,
+    "IP_type": "non_memory",
+    "base_address"   : "32'h0000_0009"
+  },
+  "IP_11":
+  {
+    "IP_name": "picorv32_top_axi4lite.sv",
+    "config" : true,
+    "IP_type": "non_memory",
+    "base_address"   : "32'h0000_0010"
+  },
+  "IP_12":
+  {
+    "IP_name": "fir_top_axi4lite.sv",
+    "config" : false,
+    "IP_type": "non_memory",
+    "base_address"   : "32'h0000_0011"
+  }  
+}

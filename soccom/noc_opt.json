@@ -1,0 +1,123 @@
+{
+	"EP_1": {
+		"neighbors": ["R_1"],
+		"fabric": "NoC",
+		"is_Router": false,
+        "is_Master": true,
+        "top_module_fname_1": "RV32E_top.v",
+        "top_module_fname_2": "RV32IMV1_top.v",
+        "top_module_fname_3": "RV32IMV2_top.v",
+        "top_module_fname_4": "RV32IV1_top.v",
+        "top_module_fname_5": "RV32IV2_top.v"
+	},
+	"EP_2": {
+		"neighbors": ["R_1"],
+		"fabric": "NoC",
+		"is_Router": false,
+		"is_Master": false,
+        "top_module_fname_1": "dft_top_32bit.v",
+        "top_module_fname_2": "dft_top_64bit.v",
+        "top_module_fname_3": "dft_top_128bit.v" 
+	},
+	"EP_3": {
+		"neighbors": ["R_1"],
+		"fabric": "NoC",
+		"is_Router": false,
+        "is_Master": false,
+        "top_module_fname_1": "idft_top_32bit.v",
+        "top_module_fname_2": "idft_top_64bit.v",
+        "top_module_fname_3": "idft_top_128bit.v"
+    },
+    "EP_4": {
+		"neighbors": ["R_2"],
+		"fabric": "NoC",
+		"is_Router": false,
+		"is_Master": false,
+        "top_module_fname_1": "ram_wb_01.v",
+        "top_module_fname_2": "ram_wb_01.v",
+        "top_module_fname_3": "ram_wb_01.v"
+    },
+    "EP_5": {
+		"neighbors": ["R_4"],
+		"fabric": "NoC",
+		"is_Router": false,
+		"is_Master": false,
+        "top_module_fname_1": "aes128_top.v",
+        "top_module_fname_2": "aes192_top.v",
+        "top_module_fname_3": "aes256_top.v"
+	},
+	"EP_6": {
+		"neighbors": ["R_1"],
+		"fabric": "NoC",
+		"is_Router": false,
+		"is_Master": false,
+		"top_module_fname": "fir_top.v"
+	},
+	"R_1": {
+		"neighbors": ["EP_1", "EP_2", "EP_3", "EP_4","R_2"],
+		"fabric": "NoC",
+		"is_Router": true,
+		"is_Master": false,
+		"top_module_fname": "noc_router.sv"
+	},
+	"EP_7": {
+		"neighbors": ["R_2"],
+		"fabric": "NoC",
+		"is_Router": false,
+		"is_Master": false,
+		"top_module_fname": "ram_wb_02.v"
+	},
+	"R_2": {
+		"neighbors": ["EP_5", "R_1", "EP_6", "R_3"],
+		"fabric": "NoC",
+		"is_Router": true,
+		"is_Master": false,
+		"top_module_fname": "noc_router.sv"
+    },
+	"R_3": {
+		"neighbors": ["R_2", "R_4", "R_5", "EP_7"],
+		"fabric": "NoC",
+		"is_Router": true,
+		"is_Master": false,
+		"top_module_fname": "noc_router.sv"
+	},
+	"EP_8": {
+		"neighbors": ["R_3"],
+		"fabric": "NoC",
+		"is_Router": false,
+		"is_Master": false,
+		"top_module_fname": "md5_top.v"
+	},
+	"R_4": {
+		"neighbors": ["R_3", "EP_8", "EP_9"],
+		"fabric": "NoC",
+		"is_Router": true,
+		"is_Master": false,
+		"top_module_fname": "noc_router.sv"
+	},
+	"EP_9": {
+		"neighbors": ["R_4"],
+		"fabric": "NoC",
+		"is_Router": false,
+		"is_Master": false,
+		"top_module_fname": "des3_top.v"
+	},
+	"R_5": {
+		"neighbors": ["R_3", "EP_10"],
+		"fabric": "NoC",
+		"is_Router": true,
+		"is_Master": false,
+		"top_module_fname": "noc_router.sv"
+	},
+	"EP_10": {
+		"neighbors": ["R_5"],
+		"fabric": "NoC",
+		"is_Router": false,
+		"is_Master": false,
+		"top_module_fname": "uart_top.v"
+	},
+	"Optimization" : {
+		"Power" : "9",
+		"Area"  : "1"
+	}
+}

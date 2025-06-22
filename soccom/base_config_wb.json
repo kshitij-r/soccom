@@ -1,0 +1,15 @@
+{
+	"base_config": {
+		"interconnect_noc": false,
+		"lisnoc": false,
+		"interconnect_bus": true,
+		"wishbone_bus": true,
+		"axi4lite_bus": false,
+		"security_policy_engine": null,
+		"test_wrapper": null,
+		"smart_security_wrapper": null,
+		"architecture_definition": "hybrid_wb_1.json",
+		"base_directory": "/Users/kshitijraj/Study /SoC Compiler Tool"
+	}
+	
+}

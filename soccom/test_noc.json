@@ -1,0 +1,65 @@
+{
+    "EP_3": {
+    "neighbors": ["R_2"],
+    "is_Router": false,
+    "is_Master": true,
+    "top_module_fname": "picorv32.v",
+    "config": "NOC"
+    
+},
+"EP_4": {
+    "neighbors": ["R_2"],
+    "is_Router": false,
+    "is_Master": false,
+    "top_module_fname": "dft_top_top.v",
+    "config": "NOC"
+    
+},
+"EP_5": {
+    "neighbors": ["R_2"],
+    "is_Router": false,
+    "is_Master": false,
+    "top_module_fname": "idft_top_top.v",
+    "config": "NOC"
+    
+},
+"EP_6": {
+    "neighbors": ["R_2"],
+    "is_Router": false,
+    "is_Master": false,
+    "top_module_fname": "fir_top.v",
+    "config": "NOC"
+},
+"R_2": {
+    "neighbors": ["EP_3", "EP_4", "EP_5", "EP_6","R_3"],
+    "is_Router": true,
+    "is_Master": false,
+    "top_module_fname": "noc_router.sv",
+    "config": "NOC"
+    
+},
+"R_3": {
+    "neighbors": ["EP_7", "EP_8","R_2"],
+    "is_Router": true,
+    "is_Master": false,
+    "top_module_fname": "noc_router.sv",
+    "config": "NOC"
+    
+},
+"EP_7": {
+    "neighbors": ["R_3"],
+    "is_Router": false,
+    "is_Master": false,
+    "top_module_fname": "ram_wb_02.sv",
+    "config": "NOC"
+    
+},
+"EP_8": {
+    "neighbors": ["R_3"],
+    "is_Router": false,
+    "is_Master": false,
+    "top_module_fname": "ram_wb_01.sv",
+    "config": "NOC"
+    
+    }
+}

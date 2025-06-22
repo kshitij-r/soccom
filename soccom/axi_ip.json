@@ -1,0 +1,7 @@
+{
+    "IP_name": "ram_wb.v",
+    "config" : "SLAVE",
+    "IP_type": "memory",
+    "size"   : "32'h0002_0000"
+    
+}

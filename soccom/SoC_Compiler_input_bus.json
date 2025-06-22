@@ -1,0 +1,37 @@
+{
+	"EP_1": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"top_module_fname": "aes_top_new.v",
+		"is_Master": false,
+		"is_Slave": true
+		},
+	"EP_2": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"top_module_fname": "picorv32_top.v",
+		"is_Master": true,
+		"is_Slave": false
+	},
+	"EP_3": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"top_module_fname": "fft_top.v",
+		"is_Master": false,
+		"is_Slave": true
+	},
+	"EP_4": {
+		"neighbors": ["R_1"],
+		"is_Router": false,
+		"top_module_fname": "sha256_top.v",
+		"is_Master": false,
+		"is_Slave": true
+	},
+	"R_1": {
+        "neighbors": ["EP_1","EP_2"],
+        "is_Router": true,
+        "top_module_fname": "wb_bus_b3.v",
+        "is_Master": false,
+		"is_Slave": false
+	}
+}

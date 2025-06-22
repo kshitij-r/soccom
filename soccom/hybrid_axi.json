@@ -1,0 +1,93 @@
+{ 
+    "EP_1":
+    {
+      "IP_name": "clkgen.v",
+      "config" : "SLAVE",
+      "base_address"   : "32'h0000_0000",
+      "IP_type": "non_memory",
+      "size"   : "32'h00000000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    },
+    
+    "EP_2":
+    {
+      "IP_name": "ram_top_axi4lite.sv",
+      "config" : "SLAVE",
+      "IP_type": "memory",
+      "base_address"   : "32'h0000_0000",
+      "size"   : "32'h0002_0000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    },
+    "EP_3":
+    {
+      "IP_name": "uart_top_axi4lite.sv",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "base_address"   : "32'h0000_0000",
+      "size"   : "32'h00000000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    },
+    "EP_4":
+    {
+      "IP_name": "picorv32_top_axi4lite.sv",
+      "config" : "MASTER",
+      "IP_type": "non_memory",
+      "base_address"   : "32'h0000_0000",
+      "size"   : "32'h00000000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    },
+    "EP_5":
+    {
+      "IP_name": "aes_top_axi4lite.sv",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "base_address"   : "32'h0000_0000",
+      "size"   : "32'h00000000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    },
+    "EP_6":
+    {
+      "IP_name": "md5_top_axi4lite.sv",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "base_address"   : "32'h0000_0000",
+      "size"   : "32'h00000000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    }, 
+    "EP_7":
+    {
+      "IP_name": "sha256_top_axi4lite.sv",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "base_address"   : "32'h0000_0000",
+      "size"   : "32'h00000000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    },  
+    "EP_8":
+    {
+      "IP_name": "rsa_top_axi4lite.sv",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "base_address"   : "32'h0000_0000",
+      "size"   : "32'h00000000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    },
+    "EP_9":
+    {
+      "IP_name": "des3_top_axi4lite.sv",
+      "config" : "SLAVE",
+      "IP_type": "non_memory",
+      "base_address"   : "32'h0000_0000",
+      "size"   : "32'h00000000",
+      "bus_type" : "AXI",
+      "is_Router": false
+    }
+  }
