@@ -27,7 +27,7 @@ def soc_main (base_dir_top, in_json_file_top):
             in_json_file = value['architecture_definition']
             base_dir = value['base_directory']
             SoC_generic.soc_generator_wb(base_dir, in_json_file)
-            SoC_generic_AXI.soc_generator_AXI(base_dir, in_json_file)
+            # SoC_generic_AXI.soc_generator_AXI(base_dir, in_json_file)
         
         #AXI
         elif value['interconnect_bus' and 'axi4lite_bus']:     
@@ -56,4 +56,4 @@ def soc_main (base_dir_top, in_json_file_top):
 
 
 if __name__ == '__main__':
-    soc_main('/Users/kshitijraj/Study /SoC Compiler Tool','base_config_wb.json')
+    soc_main('/Users/kshitijraj/Code/master-repo/sw/soccom/soccom','base_config_wb.json')

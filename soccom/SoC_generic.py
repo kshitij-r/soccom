@@ -758,4 +758,4 @@ def soc_generator_wb(base_dir, in_json_file):
 
 
 if __name__ == '__main__':
-    soc_generator_wb('/Users/kshitijraj/Study /SoC Compiler Tool', 'stub.json')
+    soc_generator_wb('/Users/kshitijraj/Code/master-repo/sw/soccom/soccom', 'stub.json')

@@ -5,7 +5,7 @@ def interface_ip_na(ip_dir, ip_filename):
     if ip_filename == 'picorv32.sv':    #hardcoded the value for risc 5 processor file to return the 'Compute_Tile_RV32.sv' file. 
         return 'Compute_Tile_RV32.sv'
     obj1 = extract_IO.ExtractRtl(ip_dir, ip_filename) 
-    c_dir = "/Users/kshitijraj/Study /SoC Compiler Tool"  #using a template module and making changes in that
+    c_dir = "/Users/kshitijraj/Code/master-repo/sw/soccom/soccom"  #using a template module and making changes in that
     c_filename = 'compute_tile_dm_spi.sv' #template module file name
     obj2 = extract_IO.ExtractRtl(c_dir, c_filename)
     c_tile_contents = obj2.file_read()

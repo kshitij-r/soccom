@@ -9,7 +9,6 @@
 		"test_wrapper": null,
 		"smart_security_wrapper": null,
 		"architecture_definition": "hybrid_wb_1.json",
-		"base_directory": "/Users/kshitijraj/Study /SoC Compiler Tool"
+		"base_directory": "/Users/kshitijraj/Code/master-repo/sw/soccom/soccom"
 	}
-	
 }

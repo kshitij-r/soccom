@@ -3,7 +3,7 @@ import extract_IO
 
 def interface_ip_router(ip_dir, ip_filename):
     obj1 = extract_IO.ExtractRtl(ip_dir, ip_filename)
-    c_dir = '/Users/kshitijraj/Study /SoC Compiler Tool'
+    c_dir = '/Users/kshitijraj/Code/master-repo/sw/soccom/soccom'
     c_filename = 'compute_tile_dm_spi.sv'
     obj2 = extract_IO.ExtractRtl(c_dir, c_filename)
     c_tile_contents = obj2.file_read()

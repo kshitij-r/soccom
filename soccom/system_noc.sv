@@ -20,8 +20,8 @@ input[4 * 32 - 1:0] wb_ext_dat_o
 
 
 import dii_package::dii_flit;
-import optimsoc_config::*;
 import opensocdebug::mor1kx_trace_exec;
+import optimsoc_config::*;
 import optimsoc_functions::*;
 
 parameter config_t CONFIG = 'x; 
